@@ -2,75 +2,104 @@
     margin: 0;
     padding: 0;
 }
-header, nav{
-    /* canh giữa cách lề mỗi bên 10% */
-    margin: 5px 10%;
-}
-nav{
-    background: #484848; /*tô màu cho menu cha*/
-    border-radius: 5px; /* bo góc */
-}
-nav ul{
-    display: flex;
-}
-nav> ul li{
-    list-style: none; /* bỏ dấu chấm mặc định của li */
-    /* kẻ đường bên trái và bên phải của li */
-    border-right: 1px solid #ccc;
-    border-left:1px solid #333;
-}
-nav> ul li a{
-    display: block;
-    padding: 0 25px;
+
+.sidebar {
+    background-color: #192433;
+    padding: 0 40px;
+    height: 50px;
     line-height: 50px;
-    color: #f1f2f3;
+    font-family: sans-serif;
+    color: white;
+}
+ul {
+    /* float: right; */
+    /* position:absolute ;
+    justify-content: center; */
+}
+li {
+    display: inline;
+    transition: 0.3s;
+    padding: 12px 18px;
+}
+ 
+/* .logo {
+    float: left;
+    cursor: pointer;
+} */
+ 
+li a {
+    color: white;
     text-decoration: none;
 }
-nav ul li:first-child {
-    border-left: none; /* bỏ đường kè trái của phần tử đầu tiên */
-}
-nav> ul li:first-child a{
-    border-bottom-left-radius: 5px;
-    border-top-left-radius: 5px;
-}
-/* Khi hover đến li, tô màu cho thẻ a */
-nav ul li:hover>a{
-    background: red;
-    opacity: .7;
-    color: yellow;
-}
-/*menu con*/
-/*Ẩn các menu con cấp 1,2,3*/
-nav li ul{
+ 
+/* .icon {
+    float: right;
     display: none;
-    min-width: 350px;
+} */
+
+ul li:hover{
+    background-color:#009688;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+ul.cap_2 {
+    width: 200px;
+    height: 153px;
+    border: 1px solid #192433;
+    background-color: #192433;
     position: absolute;
+    top: 39px;
+    left: -13px;
+    box-shadow: 2px 2px 4px 1px #00000057;
+    display: none;
 }
-nav li>ul li{
-    width: 100%;
+ 
+ul.cap_2 li {
+    display: block;
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+}
+ 
+ul.cap_2 li:last-child {
     border: none;
-    border-bottom: 1px solid #ccc;
-    background: #999;
-    text-align: left;
 }
-nav li>ul li:first-child a{
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+ 
+li{
+    position: relative;
 }
-nav li>ul li:last-child {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
+li:hover ul.cap_2 {
+    display: block;
 }
-nav li>ul li:last-child a{
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-/*khi hover thì hiện menu con*/
-nav  li:hover > ul{
-    display:  block;
-}
-/*Hiển thị menu con cấp 2,3,4 bên cạnh phải*/
-nav > ul li > ul li >ul{
-    margin-left: 352px;
-    margin-top: -50px;
+@media(max-width:1000px){
+    ul{
+        display: none;
+    }
+    ul.active {
+        margin: 0;
+        background-color:black;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top:50px;
+        left: 0px;
+        display: block;
+    }
+    ul li{
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid white
+    }
+    .icon{
+        display: block;
+    }
+    ul.cap_2{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 9999;
+        left: 0px;
+    }
 }

@@ -2,27 +2,121 @@ header{
     height: 700px;
     width: 1300px;
     background-color: white;
-    /* justify-content: space-between; */
-}
-#fixNav{
-    position: fixed;
-    z-index: 10000;
-    background-color: white;
-    top: 0;
-}
-.header{
-    justify-content: space-between;
 }
 
+.sidebar{
+    height: 100px;
+    width: 1300px;
+    background-color: white;
+    margin-top: -30px;
+}
 .header-logo{
     margin-left: 40px;
     margin-top: 30px;
 }
 
 .logo{
-    height: 100px;
-    width: 200px;
+    height: 70px;
+    width: 150px;
 }
+
+.menu{
+    height: 100px;
+    width: 600px;
+    margin-left: 260px;
+    margin-top: -70px;
+    background-color:white;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;padding: 0;
+}
+
+u::after{
+    content: '';
+    clear: both;
+    display: block;
+}
+
+nav>ul>li{
+    float: left;
+    position: relative;
+}
+
+.dropdown-content-li{
+    height: 20px;
+    width: 100px;
+}
+
+.dropdown-content-2-li{
+    width: 200px;
+    height: 20px;
+}
+
+.dropdown-content-3-li{
+    width: 240px;
+    height: 20px;
+}
+
+a{
+    display: block;
+    padding: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    height: 345px;
+    margin-left: -414px;
+    margin-top: 16px;
+    padding-left: 15px;
+    min-width: 150px;
+    background-color: white
+}
+
+.dropdown-content-2{
+    display: none;
+    position: absolute;
+    height: 345px;
+    margin-top: 16px;
+    margin-left: -250px;
+    background-color: white;
+}
+
+.dropdown-content-3{
+    display: none;
+    position: absolute;
+    height: 345px;
+    background-color: white;
+    margin-top: 16px;
+    margin-left: -50px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content-2 {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content-3 {
+    display: block;
+}
+
+
+
+
+
+
+
 
 .header-info{
     height: 100px;
@@ -34,18 +128,6 @@ header{
     margin-top: -100px;
 }
 
-/* nav{
-    background-color: red;
-}
-
-nav ul{
-    display: flex;
-}
-
-nav> ul li{
-    list-style: none;
-
-} */
 ul{
     display: flex;
     justify-content: space-between;
@@ -61,21 +143,20 @@ li{
     height: 100px;
     width: 200px;
     margin-left: 1100px;
-    margin-top: -100px;
+    margin-top: -90px;
     justify-content: space-around;
 }
 
 hr{
     border: 2px solid black;
-    margin-top: -10px;
+    margin-top: -40px;
 }
 
 .header-outstand{
-    height: 300px;
+    height: 400px;
     width: 1300px;
     background-color: rgb(219, 219, 219);
-    margin-top: 150px;
-    padding-bottom: 120px;
+    margin-top: -5px;
 }
 
 /* .img-outstand{
@@ -118,10 +199,12 @@ a{
 }
 
 .link-info-outstand {
-    font-size: 30px;
+    font-size: 28px;
     color: black;
 }
-
+.p-header-info-outstand{
+    font-size: 13px;
+}
 .read-info {
     color: black;
     font-size: 15px;
@@ -159,7 +242,7 @@ a{
     height: 800px;
     width: 1300px;
     background-color: white;
-    margin-top: -250px;
+
 }
 
 .content-1{
@@ -300,7 +383,6 @@ a{
     width: 500px;
     margin-left: 0px;
 }
-
 .btn-content{
     background-color: black;
     color: white;
@@ -309,13 +391,11 @@ a{
     margin-left: 510px;
     margin-top: -700px;
 }
-
 .hr2-content{
     margin-top: -40px;
     width: 580px;
     margin-right: 0px;
 }
-
 .haha{
     height: 700px;
     width: 1300px;
@@ -898,31 +978,3 @@ a{
 .link-footer{
     color: black;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
